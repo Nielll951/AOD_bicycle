@@ -564,3 +564,86 @@ $minwidth: 320px;
    }
 
 }
+
+.subscribe {
+
+   &__body {
+      padding: 110px 0;
+      max-width: 534px;
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   &__logo {
+      margin-bottom: 39px;
+   }
+
+   &__label {
+      color: #adafb0;
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 35px;
+   }
+
+   &__form {
+      @include flexbox();
+   }
+
+   &__input {
+      flex: 1 1 auto;
+      padding-right: 8px;
+
+      .input {
+         width: 100%;
+         height: 69px;
+         background-color: #ffffff;
+         border: 1px solid #d3d7d9;
+         padding: 0 28px 0 28px;
+         font-size: 20px;
+         color: #929292;
+         font-style: italic;
+
+         &.focus {
+            font-style: normal;
+            color: #333;
+         }
+
+         &.err {
+            border: 1px solid red;
+         }
+      }
+   }
+
+   &__button {
+      flex: 0 0 126px;
+   }
+
+   &__btn {
+      width: 100%;
+      height: 69px;
+      line-height: 69px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 300;
+      text-transform: uppercase;
+      background-color: #64c29e;
+   }
+
+   @media (max-width: 750px) {
+      &__body {
+         padding: 50px 0;
+      }
+   }
+
+   @media (max-width: 500px) {
+      &__form {
+         display: block;
+      }
+
+      &__input {
+         padding: 0 0 8px 0;
+      }
+   }
+}
+
+.input {}
