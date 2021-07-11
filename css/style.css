@@ -509,9 +509,52 @@ h6 {
   }
 }
 
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #a9afb3;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #a9afb3;
+}
+
 .slider {
   background-color: #f7f7f7;
   padding: 120px 0 60px 0;
+}
+@media (max-width: 1100px) {
+  .slider__body .slick-dots {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .slider__body .slick-dots {
+    padding-top: 30px;
+  }
 }
 .slider__item {
   text-align: center;
@@ -535,6 +578,16 @@ h6 {
   line-height: 34px;
   color: #848789;
   font-style: italic;
+}
+@media (max-width: 1100px) {
+  .slider {
+    padding: 80px 0 60px 0;
+  }
+}
+@media (max-width: 767px) {
+  .slider {
+    padding: 50px 0 30px 0;
+  }
 }
 
 .shop__body {
@@ -567,6 +620,14 @@ h6 {
   color: #fff;
   line-height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.shop__btn:hover {
+  background-color: #3e3e3e;
 }
 @media (max-width: 1100px) {
   .shop__body {
@@ -670,6 +731,14 @@ h6 {
   font-weight: 300;
   text-transform: uppercase;
   background-color: #64c29e;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.subscribe__btn:hover {
+  background-color: #91d4bb;
 }
 @media (max-width: 750px) {
   .subscribe__body {
@@ -712,6 +781,13 @@ h6 {
 .footer__adress p:last-child span {
   font-style: italic;
 }
+.footer__adress p a {
+  color: inherit;
+}
+.footer__adress p a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .footer__social {
   display: -webkit-box;
   display: -moz-box;
@@ -745,6 +821,9 @@ h6 {
 
 .social__link {
   margin: 0 7.5px;
+}
+.social__link img:hover {
+  opacity: 0.7;
 }
 
 .dev {
